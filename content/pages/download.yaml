@@ -1,0 +1,6 @@
+$path: /{slug}
+$title@: Free Download
+$view: /views/download.html
+$titles:
+  nav: Free Download
+nav-order: 3
