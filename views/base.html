@@ -15,7 +15,7 @@
     <!--header-->
     <div id="header" style="height:100px;">
       <div id="logo" class="png" style="height:100px;width:50%;">
-        <a href="{{g.doc('/content/pages/index.md', locale=doc.locale).url.path}}" style="height:100px;"></a>
+        <a href="{{g.doc('/content/pages/index.yaml', locale=doc.locale).url.path}}" style="height:100px;"></a>
       </div>
       <!-- end logo -->
       <!--<div id="yjsgheadergrid" style="width:50%;">-->
@@ -42,8 +42,15 @@
     <!--top menu-->
     <div id="topmenu_holder">
       <div class="top_menu" style="font-size:12px;">
-        <div id="horiznav" class="horiznav">	<ul class="menunav">
-          <li id="current" class="active item101"><span class="mymarg"><a href="/"><span class="yjm_has_none"><span class="yjm_title">Home</span></span></a></span></li><li class="item112"><span class="mymarg"><a href="/index.php/why-pridoc"><span class="yjm_has_none"><span class="yjm_title">Why Choose PriDoc?</span></span></a></span></li><li class="item107"><span class="mymarg"><a href="/index.php/overview"><span class="yjm_has_none"><span class="yjm_title">Modules</span></span></a></span></li><li class="item124"><span class="mymarg"><a href="/index.php/free-download"><span class="yjm_has_none"><span class="yjm_title">Free Download</span></span></a></span></li><li class="item109"><span class="mymarg"><a href="/index.php/licence-fees"><span class="yjm_has_none"><span class="yjm_title">Licence Fees</span></span></a></span></li><li class="item106"><span class="mymarg"><a href="/index.php/contact-us"><span class="yjm_has_none"><span class="yjm_title">Contact Us</span></span></a></span></li><li class="item126"><span class="mymarg"><a href="/index.php/about-us"><span class="yjm_has_none"><span class="yjm_title">About Us</span></span></a></span></li></ul></div>
+        <div id="horiznav" class="horiznav">
+          <ul class="menunav">
+            {% for page in g.docs('/content/pages') %}
+            <li {% if doc == page %}class="active"{% endif %}>
+              <a href="{{page.url.path}}">{{page.titles('nav')}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
     <!-- end top menu -->

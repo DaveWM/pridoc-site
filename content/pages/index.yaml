@@ -1,3 +1,5 @@
 $path: /
 $title@: PriDoc
 $view: /views/index.html
+$titles:
+  nav: Home
