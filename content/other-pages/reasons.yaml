@@ -1,0 +1,3 @@
+$path: /{slug}/             # The URL path format.
+$view: /views/reasons.html      # The template to use.
+$title: 10 Reasons to use PriDoc                 # Collection's title.
