@@ -1,0 +1,25 @@
+@import "template";
+@import "metal";
+
+.rounded {
+  border-radius: 5px;
+}
+
+.header__info {
+  max-width: 328px;
+  float: right;
+  color: #19548b;
+  h4 {
+    color: #11a3c7;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0;
+  }
+  .phone  {
+    margin-top: 3px;
+    color: #0c7bae;
+    font-size: 24px;
+  }
+}
