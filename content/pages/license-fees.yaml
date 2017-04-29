@@ -1,0 +1,6 @@
+$path: /{slug}
+$title@: License Fees
+$view: /views/license-fees.html
+$titles:
+  nav: License Fees
+nav-order: 4
