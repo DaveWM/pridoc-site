@@ -1,0 +1,47 @@
+{% extends "/views/base.html" %}
+
+{% block main %}
+<div id="centerbottom" style="font-size:12px; width:1000px;">
+    <!--MAIN LAYOUT HOLDER -->
+    <div id="holder2">
+        <!-- messages -->
+
+        <div id="system-message-container">
+        </div>
+        <!-- end messages -->
+        <!-- MID BLOCK -->
+        <div id="midblock" style="width:100%;">
+            <div class="insidem">
+                <div id="yjsgbodytop" style="font-size:12px;">
+                    <div id="bodytop1" class="yjsgxhtml" style="width:100.00%;">
+                        <div class="yjsquare">
+                            <div class="yjsquare_in">
+                                <div id="sp-sig144" class="sp-sig">
+                                    {% for image_file in g.statics('/source/images/modules/' + (doc.title | slug))|sort(attribute='url.path') %}
+                                    <a href="{{image_file.url.path}}" rel="lightbox-atomium" title="{{image_file.url.path|replace('/static/images/modules/', '')|replace((doc.title|slug) + '/','')|replace('.png','')|replace('.jpg','')}}">
+                                        <img class="module__image sp_simple_gallery" src="{{image_file.url.path}}" alt="{{image_file.url.path|replace('/static/images/modules/', '')|replace((doc.title|slug) + '/','')|replace('.png','')|replace('.jpg','')}}">
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- component -->
+                {{doc.html | safe}}
+                <!--end news item -->
+
+                <!-- end component -->
+                <div class="clearm"></div>
+            </div>
+            <!-- end mid block insidem class -->
+        </div>
+        <!-- end mid block div -->
+
+
+    </div>
+    <!-- end holder div -->
+
+</div>
+{% endblock %}

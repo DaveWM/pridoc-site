@@ -1,0 +1,7 @@
+path: /modules/{slug}/          # The URL path format.
+view: /views/modules/base-module.html      # The template to use.
+title: Other Pages                 # Collection's title.
+category: module
+
+localization:
+  path: /{locale}/{slug}/    # Localized URL path format.
