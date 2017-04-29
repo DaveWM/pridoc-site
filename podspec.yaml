@@ -19,6 +19,8 @@ static_dirs:
   serve_at: /static/images/
 - static_dir: /source/videos/
   serve_at: /static/videos/
+- static_dir: /source/js/
+  serve_at: /static/js/
 
 preprocessors:
 - kind: sass
