@@ -1,0 +1,6 @@
+$path: /{slug}
+$title@: About Us
+$view: /views/about.html
+$titles:
+  nav: About Us
+nav-order: 6
