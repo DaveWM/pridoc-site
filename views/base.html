@@ -44,7 +44,7 @@
       <div class="top_menu" style="font-size:12px;">
         <div id="horiznav" class="horiznav">
           <ul class="menunav">
-            {% for page in g.docs('/content/pages') %}
+            {% for page in g.docs('/content/pages', order_by='nav-order') %}
             <li {% if doc == page %}class="active"{% endif %}>
               <a href="{{page.url.path}}">{{page.titles('nav')}}</a>
             </li>

@@ -1,0 +1,6 @@
+$path: /overview
+$title@: Modules
+$view: /views/modules.html
+$titles:
+  nav: Modules
+nav-order: 2

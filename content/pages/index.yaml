@@ -3,3 +3,4 @@ $title@: PriDoc
 $view: /views/index.html
 $titles:
   nav: Home
+nav-order: 0
