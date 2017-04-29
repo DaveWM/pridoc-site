@@ -110,8 +110,8 @@
                 document.write('span>');
                 //-->
             </script></p>
-          <p> </p>
-          <p><strong> </strong></p>
+          <p>&nbsp;</p>
+          <p><strong>&nbsp;</strong></p>
           <p><strong>Tel:</strong> <strong>0333 303 1194</strong> </p></div>
       </div>
 
@@ -126,14 +126,14 @@
     </div>
     <div id="user23" class="yjsgxhtml" style="width:30%;">
       <div class="yjsquare">
-        <h4>
-          <span>Video</span> Demonstrations  </h4>
-        <div class="yjsquare_in"><p>• <a href="/videos/Communications_demo.wmv" target="_blank" title="Demo of Communications module">Communications module</a></p>
-          <p>• <a href="/videos/Recruitment_demo.wmv" target="_blank" title="Demo of Recruitment module">Recruitment module</a></p>
-          <p>• <a href="/videos/Payroll_Interface_overview.wmv" target="_blank" title="Demo of integration between Scheduler, Payroll and Personnel modules">Scheduler, Payroll and Personnel modules</a></p>
-          <p>• <a href="/videos/Pay_Rates_demo.wmv" target="_blank" title="How to set up Pay Rate schemes">Setting up Pay Rates</a></p>
-          <p>• <a href="/videos/PSP_Plan_demo.wmv" target="_blank" title="How to set up Sick Pay plans">Sick Pay Plans</a></p>
-          <p>• <a href="/videos/PMP_Plan_demo.wmv" target="_blank" title="How to set up Maternity Pay plans">Maternity Pay Plans</a></p></div>
+          <h4>
+            <span>Video</span> Demonstrations
+          </h4>
+          <ul class="yjsquare_in videos">
+            {% for video in g.yaml('/content/videos.yaml') %}
+            <li><a href="/static/videos/{{video.filename}}" target="_blank" title="{{video.title}}">{{video.text}}</a></li>
+            {% endfor %}
+          </ul>
       </div>
 
     </div>

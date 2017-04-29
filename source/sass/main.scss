@@ -23,3 +23,13 @@
     font-size: 24px;
   }
 }
+
+.videos {
+  list-style: disc;
+  padding: 5px 20px;
+  li {
+    padding: 3px 0;
+    margin: 6px 0;
+    line-height: 18px;
+  }
+}
