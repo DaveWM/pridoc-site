@@ -1,0 +1,6 @@
+$path: /{slug}
+$title@: Contact Us
+$view: /views/contact.html
+$titles:
+  nav: Contact Us
+nav-order: 5
