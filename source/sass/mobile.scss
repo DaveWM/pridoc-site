@@ -48,6 +48,12 @@
     .main-content {
       padding-top: 0 !important;
     }
+
+    @for $i from 1 through 7 {
+      #mod_#{$i} {
+        top: (45px + (($i - 1) * 105)) !important;
+      }
+    }
   }
 
   .license-page {

@@ -68,7 +68,8 @@
 }
 
 .module-link {
-  left: 140px;
+  left: 50%;
+  transform: translateX(-50%);
   height: 80px;
   width: 180px;
   position: absolute;
@@ -85,7 +86,7 @@
 
   @for $i from 1 through 7 {
     &#mod_#{$i} {
-      top: (192px + (($i - 1) * 118.5));
+      top: (55px + (($i - 1) * 131));
     }
   }
 }
@@ -128,6 +129,12 @@ header {
 
   .main-content {
     padding-top: 125px;
+  }
+  .diagram {
+    position: relative;
+    img {
+      width:100%;
+    }
   }
 }
 
