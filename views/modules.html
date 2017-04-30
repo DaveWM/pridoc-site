@@ -51,33 +51,13 @@
                     </div>
                 </div>
                 <!-- end component -->
-                <div id="yjsgbodybottom" style="font-size:12px;">
-                    <div id="bodybottom1" class="yjsgxhtml diagram" >
-                        <div class="yjsquare">
-                            <div class="yjsquare_in"><p><img src="{{g.static('/source/images/FlowChart.png').url.path}}" border="0" alt="Flow Chart showing all 7 Modules" style="vertical-align: top; margin-top: 20px; margin-bottom: 20px; float: left; border-width: 2px; border-color: black; border-style: solid;"></p>
-                                <div class="module-link" id="mod_1">
-                                    <a href="{{g.doc('/content/modules/your-organisation.html').url.path}}" target="_blank" title="Click to read about the YOUR ORGANISATION module" style="color: #333333; text-decoration: none;"><span class="Normal-P"><span style="opacity: 0; filter: Alpha(opacity=0);"> Click to read about this module. Click to read about this module. Click to read about this module. Click to read about this module.</span></span></a>
-                                </div>
-                                <div class="module-link" id="mod_2">
-                                    <p class="Normal-P"><a href="{{g.doc('/content/modules/communications.html').url.path}}" target="_blank" title="Click to read about the COMMUNICATIONS module" style="color: #333333; text-decoration: none;"><span class="Normal-P"><span style="opacity: 0; filter: Alpha(opacity=0);"> Click to read about this module. Click to read about this module. Click to read about this module. Click to read about this module.</span></span></a></p>
-                                </div>
-                                <div class="module-link" id="mod_3">
-                                    <p class="Normal-P"><a href="{{g.doc('/content/modules/recruitment.html').url.path}}" target="_blank" title="Click to read about the RECRUITMENT module" style="color: #333333; text-decoration: none;"><span class="Normal-P"><span style="opacity: 0; filter: Alpha(opacity=0);"> Click to read about this module. Click to read about this module. Click to read about this module. Click to read about this module.</span></span></a></p>
-                                </div>
-                                <div class="module-link" id="mod_4">
-                                    <p class="Normal-P"><a href="{{g.doc('/content/modules/personnel.html').url.path}}" target="_blank" title="Click to read about the PERSONNEL module" style="color: #333333; text-decoration: none;"><span class="Normal-P"><span style="opacity: 0; filter: Alpha(opacity=0);"> Click to read about this module. Click to read about this module. Click to read about this module. Click to read about this module.</span></span></a></p>
-                                </div>
-                                <div class="module-link" id="mod_5">
-                                    <p class="Normal-P"><a href="{{g.doc('/content/modules/scheduler.html').url.path}}" target="_blank" title="Click to read about the SCHEDULER module" style="color: #333333; text-decoration: none;"><span class="Normal-P"><span style="opacity: 0; filter: Alpha(opacity=0);"> Click to read about this module. Click to read about this module. Click to read about this module. Click to read about this module.</span></span></a></p>
-                                </div>
-                                <div class="module-link" id="mod_6" >
-                                    <p class="Normal-P"><a href="{{g.doc('/content/modules/payroll.html').url.path}}" target="_blank" title="Click to read about the PAYROLL module" style="color: #333333; text-decoration: none;"><span class="Normal-P"><span style="opacity: 0; filter: Alpha(opacity=0);"> Click to read about this module. Click to read about this module. Click to read about this module. Click to read about this module.</span></span></a></p>
-                                </div>
-                                <div class="module-link" id="mod_7" >
-                                    <p class="Normal-P"><a href="{{g.doc('/content/modules/accounts.html').url.path}}" target="_blank" title="Click to read about the ACCOUNTS module" style="color: #333333; text-decoration: none;"><span class="Normal-P"><span style="opacity: 0; filter: Alpha(opacity=0);"> Click to read about this module. Click to read about this module. Click to read about this module. Click to read about this module.</span></span></a></p>
-                                </div></div>
+                <div id="yjsgbodybottom">
+                    <div class="yjsgxhtml diagram" >
+                        {% for module in g.docs('/content/modules/', order_by='$order') %}
+                        <div class="module-link module-link--{{module.colour}}">
+                            <a href="{{module.url.path}}" target="_blank" title="Click to read about the {{module.title | upper}} module">{{module.title}}</a>
                         </div>
-
+                        {% endfor %}
                     </div>
                     <div id="bodybottom3" class="yjsgxhtml main-content">
                         <div class="yjsquare">
@@ -94,10 +74,11 @@
 
                     </div>
                 </div>
-                <div class="clearm"></div>
             </div>
-            <!-- end mid block insidem class -->
+            <div class="clearm"></div>
         </div>
+            <!-- end mid block insidem class -->
+    </div>
         <!-- end mid block div -->
 
 

@@ -67,30 +67,6 @@
   background: #fff;
 }
 
-.module-link {
-  left: 50%;
-  transform: translateX(-50%);
-  height: 80px;
-  width: 180px;
-  position: absolute;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow: hidden;
-  a {
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  @for $i from 1 through 7 {
-    &#mod_#{$i} {
-      top: (55px + (($i - 1) * 131));
-    }
-  }
-}
-
 .container {
   max-width: 1000px;
   width: 100%;
@@ -124,7 +100,7 @@ header {
 
 .modules-page {
   .diagram, .main-content {
-    width: 50%;
+    width: 49%;
   }
 
   .main-content {
@@ -132,8 +108,44 @@ header {
   }
   .diagram {
     position: relative;
+    border: 1px solid black;
+    text-align: center;
+    margin: 31px 5px;
     img {
       width:100%;
+    }
+
+    .module-link {
+      color: white;
+      border-radius: 7px;
+      text-align: center;
+      margin: 35px 25%;
+      font-size: 23px;
+      line-height: 28px;
+      position: relative;
+      a {
+        color: white;
+        padding: 17px;
+        display: block;
+        text-decoration: none;
+      }
+
+      &:not(:last-child)::after {
+        content: url('/static/images/arrow-down.png');
+        position: absolute;
+        bottom: -33px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &.module-link--blue {
+        background-color: #93cddd;
+      }
+      &.module-link--orange {
+        background-color: #e46c0a;
+      }
+      &.module-link--green {
+        background-color: #92d050;
+      }
     }
   }
 }

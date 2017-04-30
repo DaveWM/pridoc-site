@@ -39,20 +39,11 @@
   .modules-page {
     .main-content, .diagram {
       width: 100% !important;
-    }
-
-    .diagram img {
-      width: 100%;
+      margin: 0 !important;
     }
 
     .main-content {
       padding-top: 0 !important;
-    }
-
-    @for $i from 1 through 7 {
-      #mod_#{$i} {
-        top: (45px + (($i - 1) * 105)) !important;
-      }
     }
   }
 
