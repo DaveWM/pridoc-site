@@ -34,12 +34,7 @@ deployments:
   default:
     destination: local
     out_dir: my-codelab-launch/
-  gcs:
-    destination: gcs
-    bucket: mybucket.example.com
-  s3:
+  aws:
     destination: s3
-    bucket: mybucket.example.com
-  sandbox:
-    destination: gcs
-    bucket: sandbox.growlaunches.com
+    bucket: pridoc-site
+
