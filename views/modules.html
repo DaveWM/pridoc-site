@@ -1,7 +1,7 @@
 {% extends "/views/base.html" %}
 
 {% block main %}
-<div id="centerbottom" style="font-size:12px; width:1000px;">
+<div id="centerbottom" class="container modules-page">
     <!--MAIN LAYOUT HOLDER -->
     <div id="holder2">
         <!-- messages -->
@@ -52,7 +52,7 @@
                 </div>
                 <!-- end component -->
                 <div id="yjsgbodybottom" style="font-size:12px;">
-                    <div id="bodybottom1" class="yjsgxhtml" style="width:50.00%;">
+                    <div id="bodybottom1" class="yjsgxhtml diagram" >
                         <div class="yjsquare">
                             <div class="yjsquare_in"><p><img src="{{g.static('/source/images/FlowChart.png').url.path}}" border="0" alt="Flow Chart showing all 7 Modules" style="vertical-align: top; margin-top: 20px; margin-bottom: 20px; float: left; border-width: 2px; border-color: black; border-style: solid;"></p>
                                 <div class="module-link" id="mod_1">
@@ -79,13 +79,9 @@
                         </div>
 
                     </div>
-                    <div id="bodybottom3" class="yjsgxhtml" style="width:50.00%;">
+                    <div id="bodybottom3" class="yjsgxhtml main-content">
                         <div class="yjsquare">
                             <div class="yjsquare_in"><p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;&nbsp;</p>
                                 <h3>Security Levels&nbsp;</h3>
                                 <p>Some of the information used by PriDoc will be confidential in nature (e.g. personnel records, pay details, etc.) and so it will be necessary to restrict some of the functionality to certain users.&nbsp;</p>
                                 <p>Rather than give every user yet another username to remember, access to the PriDoc modules is controlled through the use of just four passwords corresponding to four levels of access, as follows:</p>

@@ -1,0 +1,73 @@
+@media (max-width: 720px) {
+  .horiznav {
+    width: 100%;
+    height: auto;
+    background: none;
+    .menunav li {
+      width: 100%;
+      float: none;
+      background: #8f8f8f;
+
+      &:nth-child(2n) {
+        background: #7a7a7a;
+      }
+    }
+  }
+
+  .logo {
+    max-width: 100%;
+  }
+
+  header {
+    & .header__logo, & .header__info {
+      width: 100% !important;
+      float: none !important;
+      text-align: center;
+      max-width: none !important;
+    }
+  }
+
+  .why-pridoc {
+    .reasons-container {
+      display: none;
+    }
+    .main-container {
+      width: 100% !important;
+    }
+  }
+
+  .modules-page {
+    .main-content, .diagram {
+      width: 100% !important;
+    }
+
+    .diagram img {
+      width: 100%;
+    }
+
+    .main-content {
+      padding-top: 0 !important;
+    }
+  }
+
+  .license-page {
+    .main-content, .license-info {
+      width: 100% !important;
+    }
+  }
+
+  .scroll-wrapper {
+    max-width: 375px;
+    overflow: auto;
+  }
+
+  .hidden-mobile {
+    display: none;
+  }
+
+  .footer {
+    .column {
+      width: 50% !important;
+    }
+  }
+}

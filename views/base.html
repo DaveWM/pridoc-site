@@ -4,6 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="robots" content="index, follow" />
     <meta name="keywords" content="PriDoc, GPMS software, General Practice, Recruitment, Personnel, Scheduler, Rotas, Payroll, Accounts, Rota planner, GP admin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="{{g.static('/source/images/favicon.ico').url.path}}" type="image/vnd.microsoft.icon">
     <meta name="description" value="{{_(podspec.description)}}">
     <title>{{_(podspec.title)}} – {{_(doc.title)}}</title>
@@ -12,11 +13,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.2/baguetteBox.min.css"/>
   </head>
   <body id="stylef6">
-  <div id="centertop" style="font-size:12px; width:1000px;">
+  <div class="container" id="centertop" style="font-size:12px;">
     <!--header-->
-    <div id="header" style="height:100px;">
-      <div id="logo" class="png" style="height:100px;width:50%;">
-        <a href="{{g.doc('/content/pages/index.yaml', locale=doc.locale).url.path}}" style="height:100px;"></a>
+    <header id="header">
+      <div class="header__logo" class="png">
+        <a href="{{g.doc('/content/pages/index.yaml', locale=doc.locale).url.path}}">
+          <img src="{{g.static('/source/images/logo.png').url.path}}"/>
+        </a>
       </div>
       <!-- end logo -->
       <!--<div id="yjsgheadergrid" style="width:50%;">-->
@@ -31,14 +34,12 @@
 
         <!--</div>-->
       <!--</div>-->
-      <div id="yjsgheadergrid" style="width:50%;">
-        <div class="header__info">
-          <h4>Need Assistance?</h4>
-          <p>Please give us a call for more information on our software and how it can help you.</p>
-          <p class="phone">0333 303 1194</p>
-        </div>
+      <div class="header__info">
+        <h4>Need Assistance?</h4>
+        <p>Please give us a call for more information on our software and how it can help you.</p>
+        <p class="phone">0333 303 1194</p>
       </div>
-    </div>
+    </header>
     <!-- end header -->
     <!--top menu-->
     <div id="topmenu_holder">
@@ -58,7 +59,7 @@
     <div id="yjsg2">
       <div id="adv1" class="yjsgxhtml" style="width:100.00%;">
         <div class="yjsquare">
-          <div class="yjsquare_in"><p><img src="{{ g.static('/source/images/pridocbanner-web.jpg').url.path }}" border="0" alt="" /></p></div>
+          <div class="yjsquare_in"><p><img class="logo" src="{{ g.static('/source/images/pridocbanner-web.jpg').url.path }}" border="0" alt="" /></p></div>
         </div>
 
       </div>
@@ -69,8 +70,8 @@
     {{doc.html|safe}}
   {% endblock %}
   <!-- end centerbottom-->
-  <div id="yjsg7" class="footer" style="font-size:12px; width:1000px;">
-    <div id="user21" class="yjsgxhtml" style="width:30%;">
+  <div id="yjsg7" class="footer container" style="font-size:12px;">
+    <div id="user21" class="yjsgxhtml column" >
       <div class="yjsquare">
         <h4>
           <span>Contact</span> Details  </h4>
@@ -124,7 +125,7 @@
       </div>
 
     </div>
-    <div id="user22" class="yjsgxhtml" style="width:40%;">
+    <div id="user22" class="column hidden-mobile yjsgxhtml">
       <div class="yjsquare">
         <h4>
           <span>Ultimate</span> Practice Management Software  </h4>
@@ -132,7 +133,7 @@
       </div>
 
     </div>
-    <div id="user23" class="yjsgxhtml" style="width:30%;">
+    <div id="user23" class="column yjsgxhtml">
       <div class="yjsquare">
           <h4>
             <span>Video</span> Demonstrations
@@ -147,7 +148,7 @@
     </div>
   </div>
   <!-- footer -->
-  <div id="footer"  style="font-size:12px; width:1000px;">
+  <div id="footer container"  style="font-size:12px;">
     <div id="youjoomla">
       <div id="footmod">
         <h6>© Emani Software Limited 2017. All rights reserved.  </h6>

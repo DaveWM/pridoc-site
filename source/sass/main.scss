@@ -1,5 +1,6 @@
 @import "template";
 @import "metal";
+@import "mobile";
 
 .rounded {
   border-radius: 5px;
@@ -35,9 +36,16 @@
 }
 
 .footer#yjsg7 {
-  font-size: 12px;
-  width: 1000px;
   background: linear-gradient(#f4f2f2, #e5e3e3 80%, #dadada 100%);
+}
+
+.footer {
+  .column {
+    width: 30%;
+    &:nth-child(2){
+      width: 40%;
+    }
+  }
 }
 
 .expandable {
@@ -80,4 +88,58 @@
       top: (192px + (($i - 1) * 118.5));
     }
   }
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+header {
+  & .header__logo, & .header__info {
+    width: 50%;
+  }
+
+  .header__logo {
+    float: left;
+    a {
+      width: 100%;
+      position: relative;
+    }
+  }
+  .header__info {
+    float: right;
+  }
+}
+
+.why-pridoc {
+  .reasons-container {
+    width: 22.5%;
+  }
+  .main-container {
+    width: 77.5%;
+  }
+}
+
+.modules-page {
+  .diagram, .main-content {
+    width: 50%;
+  }
+
+  .main-content {
+    padding-top: 125px;
+  }
+}
+
+.license-page {
+  .main-content {
+    width: 77.5%;
+  }
+  .license-info {
+    width: 22.5%;
+  }
+}
+
+.gallery {
+  text-align: center;
 }
