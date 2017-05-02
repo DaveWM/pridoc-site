@@ -54,7 +54,7 @@
   }
 
   .scroll-wrapper {
-    max-width: 375px;
+    max-width: calc(100vw - 25px);
     overflow: auto;
   }
 
