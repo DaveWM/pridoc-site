@@ -1,0 +1,37 @@
+ul.sub-nav
+{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #ea7e02;
+
+
+    li
+    {
+      flex: 1;
+      padding: 0;
+      border: 1px solid #333333;
+      background: linear-gradient(#EA7E02, #854701);
+      text-align: center;
+
+        a {
+          display: block;
+          padding: 8px 46px;
+          font-weight: bold;
+          color: #cccccc;
+        }
+        &.active,&:hover
+        {
+          background: linear-gradient(#FF8800, #914D00);
+            a {
+              color: white;
+            }
+        }
+    }
+}

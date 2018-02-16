@@ -1,0 +1,24 @@
+{% extends "/views/base.html" %}
+{% block main %}
+<div id="centerbottom" class="container">
+  <div id="yjsg3">
+    <div id="user1" class="yjsgxhtml" style="width:100.00%;">
+      <div class="yjsquare">
+        <h4>
+          <span>Download</span> Centre - Menu
+        </h4>
+        <div class="yjsquare_in">
+          <ul class="sub-nav">
+            {% for page in g.docs('/content/tasks') %}
+            <li {% if doc == page %}class="active"{% endif %}>
+              <a href="{{page.url.path}}">{{page.titles('nav')}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{doc.html | safe}}
+{% endblock %}
