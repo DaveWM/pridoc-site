@@ -1,0 +1,7 @@
+path: /downloads/{slug}/          # The URL path format.
+view: /views/downloads/base-downloads.html      # The template to use.
+title: Download Pages                 # Collection's title.
+category: downloads
+
+localization:
+  path: /{locale}/{slug}/    # Localized URL path format.

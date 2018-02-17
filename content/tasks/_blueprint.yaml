@@ -1,7 +1,0 @@
-path: /tasks/{slug}/          # The URL path format.
-view: /views/tasks/base-tasks.html      # The template to use.
-title: Task Pages                 # Collection's title.
-category: task
-
-localization:
-  path: /{locale}/{slug}/    # Localized URL path format.
