@@ -4,7 +4,7 @@ $order: 1
 versions:
   - title: Version 33.2.0 (fully ready for new HMRC Transaction Engine)
     link: http://pridoc4gps.azurewebsites.net/index.php/new-versions/164-v-33-2-0
-    date: 04 January 2018
+    date: 04/01/2018
 ---
 
 <div id="centerbottom" style="font-size:12px; width:1000px;">
@@ -50,7 +50,7 @@ versions:
 											</td>
 
 										<td class="list-date">
-						{{version.date}}					</td>
+						{{g.date(version.date, from='%d/%m/%Y') | date(format='dd MMM yyyy')}}					</td>
 
 
 
