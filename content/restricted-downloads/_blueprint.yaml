@@ -1,0 +1,7 @@
+path: /restricted-downloads/{slug}/          # The URL path format.
+view: /views/restricted-downloads/base-restricted-downloads.html      # The template to use.
+title: Restricted Downloads Pages                 # Collection's title.
+category: restricted
+
+localization:
+  path: /{locale}/{slug}/    # Localized URL path format.
