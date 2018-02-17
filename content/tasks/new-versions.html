@@ -1,6 +1,10 @@
 ---
 $title: New Versions
 $order: 1
+versions:
+  - title: Version 33.2.0 (fully ready for new HMRC Transaction Engine)
+    link: http://pridoc4gps.azurewebsites.net/index.php/new-versions/164-v-33-2-0
+    date: 04 January 2018
 ---
 
 <div id="centerbottom" style="font-size:12px; width:1000px;">
@@ -36,21 +40,22 @@ $order: 1
                 </thead>
 
                 <tbody>
+                  {% for version in doc.versions %}
                   <tr class="sectiontableentry1">
 
 					<td class="list-title">
-						<a href="http://pridoc4gps.azurewebsites.net/index.php/new-versions/164-v-33-2-0">
-							Version 33.2.0 (fully ready for new HMRC Transaction Engine)</a>
+						<a href="{{version.link}}">
+							{{version.title}}</a>
 
 											</td>
 
 										<td class="list-date">
-						04 January 2018					</td>
+						{{version.date}}					</td>
 
 
 
 								</tr>
-
+                {% endfor %}
 
                 </tbody>
               </table>

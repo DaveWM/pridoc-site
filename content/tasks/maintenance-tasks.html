@@ -1,6 +1,10 @@
 ---
 $title: Maintenance Tasks
 $order: 2
+tasks:
+  - title: Bank Holiday Dates for Calendar Year 2019
+    link: http://pridoc4gps.azurewebsites.net/index.php/tasks/154-bank-holidays-2019
+    date: 31 August 2017
 ---
 
 <div id="centerbottom" style="font-size:12px; width:1000px;">
@@ -36,21 +40,20 @@ $order: 2
                 </thead>
 
                 <tbody>
+                  {% for task in doc.tasks %}
                   <tr class="sectiontableentry1">
 
                     <td class="list-title">
-                      <a href="http://pridoc4gps.azurewebsites.net/index.php/tasks/154-bank-holidays-2019">
-							Bank Holiday Dates for Calendar Year 2019</a>
+                      <a href="{{task.link}}">{{task.title}}</a>
 
                     </td>
 
-                    <td class="list-date">
-                      31 August 2017 </td>
+                    <td class="list-date">{{task.date}}</td>
 
 
 
                   </tr>
-
+                  {% endfor %}
                 </tbody>
               </table>
           </div>
