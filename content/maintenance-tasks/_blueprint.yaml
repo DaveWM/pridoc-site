@@ -1,0 +1,7 @@
+path: /maintenance-tasks/{slug}/          # The URL path format.
+view: /views/maintenance-tasks/base-maintenance-tasks.html      # The template to use.
+title: Maintenance Task Pages                 # Collection's title.
+category: maintenance-tasks
+
+localization:
+  path: /{locale}/{slug}/    # Localized URL path format.

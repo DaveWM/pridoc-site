@@ -40,15 +40,14 @@ tasks:
                 </thead>
 
                 <tbody>
-                  {% for task in doc.tasks %}
+                  {% for task in g.docs('maintenance-tasks') %}
                   <tr class="sectiontableentry1">
 
                     <td class="list-title">
-                      <a href="{{task.link}}">{{task.title}}</a>
+                      <a href="{{task.url.path}}">{{task.description}}</a>
 
                     </td>
-
-                    <td class="list-date">{{g.date(task.date, from='%d/%m/%Y') | date(format='dd MMM yyyy')}}</td>
+                    <td class="list-date">{{g.date(task.release_date, from='%d/%m/%Y') | date(format='dd MMM yyyy')}}</td>
 
 
 
