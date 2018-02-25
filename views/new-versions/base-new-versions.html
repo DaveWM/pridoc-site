@@ -1,0 +1,97 @@
+{% extends "/views/base.html" %} 
+{% block main %}
+<div id="centerbottom" style="font-size: 12px; width: 1000px;">
+  <div id="holder2">
+    <!-- messages -->
+
+    <div id="system-message-container">
+    </div>
+    <!-- end messages -->
+    <!-- MID BLOCK -->
+    <div id="midblock" style="width:100%;">
+      <div class="insidem">
+        <!-- component -->
+
+        <div class="news_item_a">
+
+
+
+          <div class="title">
+            <h1>{{doc.description}}</h1>
+          </div>
+
+
+
+
+          <div class="newsitem_text">
+
+
+
+            <p>
+              <strong>Version {{doc.version}}</strong> of the
+              <strong>PriDoc application</strong> is now available for downloading and provides the enhancements and essential changes
+              listed below: &nbsp;</p>
+            <p>&nbsp;</p>
+            {{doc.html | render | safe}}
+            <p>&nbsp;</p>
+            <h6>Before You Install This Version</h6>
+            <ol>
+              <li>Click Help in the menu bar of the main screen of your current version of PriDoc.</li>
+              <li>Select the 'About PriDoc' option and note the Database version number. If your Database version is {{doc.prev_db_version}}, proceed
+                with the download (see Instructions below).</li>
+              <li>Otherwise, please contact support.</li>
+            </ol>
+            <p>&nbsp;</p>
+            <h3>
+              <strong>Instructions</strong>
+            </h3>
+            <p>Install the new version by carrying out&nbsp;
+              <strong>
+                <span style="text-decoration: underline;">both</span>
+              </strong> the following steps (
+              <strong>A
+                <span style="text-decoration: underline;">and</span> B</strong>):</p>
+            <p>&nbsp;</p>
+            <h3 style="text-align: left;">&nbsp;
+              <em>A: On the PC or Server that hosts the PriDoc database</em>&nbsp;</h3>
+            <h2>
+              <img src="{{g.static('/source/images/arrow.png').url.path}}" style="border: 0;" border="0" height="12">&nbsp;
+              <a href="{{doc.db_update_link}}" title="Download PriDoc Database Update (v2.33)">Download PriDoc Database Update (v2.33)</a>
+            </h2>
+            <ol>
+              <li>Backup the PriDoc database using the backup facility in the PriDoc application (choose the Admin option in
+                the menu bar of the main screen and then click the tab labelled ‘Backups'). It is essential that this first
+                step is carried out successfully before you proceed to steps 2 and 3.</li>
+              <li>Click the link directly above and then select 'Run' (or, for some browsers, 'Open').</li>
+              <li>In the screen that appears, click the button labelled “Start Update”. The wizard will automatically action
+                the required upgrade.</li>
+            </ol>
+            <p>&nbsp;</p>
+            <h3>
+              <em>B: On all PCs (including the PC or Server that hosts the PriDoc database)</em>
+            </h3>
+            <h2>
+              <img src="{{g.static('/source/images/arrow.png').url.path}}" style="border: 0;" border="0" height="12">&nbsp;
+              <a href="{{doc.application_link}}" title="Download PriDoc Application v33.2.0">Download PriDoc Application v33.2.0</a>
+            </h2>
+            <ol>
+              <li>Click the link directly above and then select 'Run' (or, for some browsers, 'Open').</li>
+              <li>In the menu that appears, choose the option called “Setup New Version of PriDoc Application” and the PriDoc
+                application setup wizard should then begin. The wizard will automatically upgrade the PriDoc application
+                to the new version.</li>
+            </ol>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <!--end news item -->
+
+        <!-- end component -->
+        <div class="clearm"></div>
+      </div>
+      <!-- end mid block insidem class -->
+    </div>
+    <!-- end mid block div -->
+  </div>
+</div>
+{% endblock %}

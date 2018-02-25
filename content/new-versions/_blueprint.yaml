@@ -1,0 +1,7 @@
+path: /new-versions/{slug}/          # The URL path format.
+view: /views/new-versions/base-new-versions.html      # The template to use.
+title: New Versions Pages                 # Collection's title.
+category: new-versions
+
+localization:
+  path: /{locale}/{slug}/    # Localized URL path format.

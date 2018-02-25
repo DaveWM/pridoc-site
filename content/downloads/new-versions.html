@@ -1,10 +1,6 @@
 ---
 $title: New Versions
 $order: 1
-versions:
-  - title: Version 33.2.0 (fully ready for new HMRC Transaction Engine)
-    link: http://pridoc4gps.azurewebsites.net/index.php/new-versions/164-v-33-2-0
-    date: 04/01/2018
 ---
 
 <div id="centerbottom" style="font-size:12px; width:1000px;">
@@ -40,17 +36,17 @@ versions:
                 </thead>
 
                 <tbody>
-                  {% for version in doc.versions %}
+                  {% for new_version_doc in g.docs('new-versions') %}
                   <tr class="sectiontableentry1">
 
 					<td class="list-title">
-						<a href="{{version.link}}">
-							{{version.title}}</a>
+						<a href="{{new_version_doc.url.path}}">
+							{{new_version_doc.description}}</a>
 
 											</td>
 
 										<td class="list-date">
-						{{g.date(version.date, from='%d/%m/%Y') | date(format='dd MMM yyyy')}}					</td>
+						{{g.date(new_version_doc.release_date, from='%d/%m/%Y') | date(format='dd MMM yyyy')}}					</td>
 
 
 
